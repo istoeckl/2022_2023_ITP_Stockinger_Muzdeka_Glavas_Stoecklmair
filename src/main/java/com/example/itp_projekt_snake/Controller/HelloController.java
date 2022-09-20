@@ -1,4 +1,4 @@
-package com.example.itp_projekt_snake;
+package com.example.itp_projekt_snake.Controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
