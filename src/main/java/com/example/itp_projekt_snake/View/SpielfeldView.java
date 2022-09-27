@@ -23,23 +23,8 @@ public class SpielfeldView extends Application {
     private static final int ROWS = 20;
     private static final int COLUMNS = ROWS;
     private static final int SQUARE_SIZE = WIDTH / ROWS;
-    private static final String[] FOODS_IMAGE = new String[]{"/img/ic_orange.png", "/img/ic_apple.png", "/img/ic_cherry.png",
-            "/img/ic_berry.png", "/img/ic_coconut_.png", "/img/ic_peach.png", "/img/ic_watermelon.png", "/img/ic_orange.png",
-            "/img/ic_pomegranate.png"};
-
-    private static final int RIGHT = 0;
-    private static final int LEFT = 1;
-    private static final int UP = 2;
-    private static final int DOWN = 3;
 
     private GraphicsContext gc;
-    private List<Light.Point> snakeBody = new ArrayList();
-    private Light.Point snakeHead;
-    private Image foodImage;
-    private int foodX;
-    private int foodY;
-    private boolean gameOver;
-    private int currentDirection;
     private int score = 0;
 
     @Override
