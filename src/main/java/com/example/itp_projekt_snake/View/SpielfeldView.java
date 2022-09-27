@@ -44,6 +44,7 @@ public class SpielfeldView extends Application {
     private void drawBackground(GraphicsContext gc) {
         for (int i = 0; i < ROWS; i++) {
             for (int j = 0; j < COLUMNS; j++) {
+                String [][] Feld = new String[i][j];
                 if ((i + j) % 2 == 0) {
                     gc.setFill(Color.web("bbdffb"));
                 } else {
