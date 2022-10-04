@@ -11,15 +11,19 @@ public class SpielfeldController {
     private static final int COLUMNS = ROWS;
     private static final int SQUARE_SIZE = WIDTH / ROWS;
 
+    private String black = "#000000";
+    private String hell = "90cbf9";
+    private String dunkel = "bbdffb";
     private int score = 0;
+
     public void drawBackground(GraphicsContext gc) {
         for (int i = 0; i < ROWS; i++) {
             for (int j = 0; j < COLUMNS; j++) {
                 String[][] feld = new String[i][j];
                 if ((i + j) % 2 == 0) {
-                    gc.setFill(Color.web("bbdffb"));
+                    gc.setFill(Color.web(dunkel));
                 } else {
-                    gc.setFill(Color.web("90cbf9"));
+                    gc.setFill(Color.web(hell));
                 }
                 gc.fillRect(i * SQUARE_SIZE, j * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE);
             }
@@ -30,14 +34,14 @@ public class SpielfeldController {
         for (int i = 0; i < ROWS; i++) {
             for (int j = 0; j < COLUMNS; j++) {
                 //Startpunkt Schlange
-                if (i==4&&j==8){
-                    System.out.println("slödgj");
-                    gc.setFill(Color.web("#000000"));
+                if (i == 4 && j == 8) {
+                    gc.setFill(Color.web(black));
                 }
             }
         }
         gc.fillRect(4 * SQUARE_SIZE, 8 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE);
     }
+
 
 
     public void drawScore(GraphicsContext gc) {

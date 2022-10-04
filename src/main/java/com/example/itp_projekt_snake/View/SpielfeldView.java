@@ -41,6 +41,7 @@ public class SpielfeldView extends Application {
         control.drawBackground(gc);
         control.drawScore(gc);
         control.drawStartSnake(gc);
+
     }
 
 
