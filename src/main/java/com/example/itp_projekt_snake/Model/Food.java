@@ -8,10 +8,6 @@ import java.util.Random;
 import static com.example.itp_projekt_snake.Model.Spielfeld.SQUARE_SIZE;
 
 public class Food {
-    private String pink = "ffc0cb";
-    private String hell = "90cbf9";
-    private String dunkel = "bbdffb";
-
 
     //lea glavas
     public void drawFood(GraphicsContext gc) {
