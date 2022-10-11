@@ -7,12 +7,10 @@ import javafx.scene.text.Font;
 
 import java.util.Random;
 
-import static com.sun.marlin.MarlinConst.BLOCK_SIZE;
 
 public class SpielfeldController {
     private static final int WIDTH = 800;
     private static final int HEIGHT = WIDTH;
-//Generate random double value from 200 to 400
 
     private static final int ROWS = 20;
     private static final int COLUMN = 20;
