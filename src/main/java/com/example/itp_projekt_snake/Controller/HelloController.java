@@ -8,10 +8,9 @@ import static com.example.itp_projekt_snake.View.SpielfeldView.gc;
 
 
 public class HelloController {
-    Food food =new Food();
-    Spielfeld spiel =new Spielfeld();
+    Food food = new Food();
+    Spielfeld spiel = new Spielfeld();
     Snake snake = new Snake();
-    SpielfeldController spielfeldController = new SpielfeldController();
 
 
     public void start() {
@@ -19,7 +18,8 @@ public class HelloController {
         Snake snake = new Snake();
         snake.drawStartSnake(gc);
         snake.moveSnake(gc);
-        spielfeldController.drawFood(gc);
+        food.drawFood(gc);
+
 
 
     }
