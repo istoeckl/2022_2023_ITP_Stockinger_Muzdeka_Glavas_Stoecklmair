@@ -21,7 +21,7 @@ public class Food {
         int value2 = 1 + random.nextInt(10);
         System.out.println(value1);
 
-        gc.setFill(Color.web(pink));
+        gc.setFill(Color.web(String.valueOf(Color.color(Math.random(), Math.random(), Math.random()))));
 
 
         gc.fillRect(value1 * SQUARE_SIZE, value2 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE);
