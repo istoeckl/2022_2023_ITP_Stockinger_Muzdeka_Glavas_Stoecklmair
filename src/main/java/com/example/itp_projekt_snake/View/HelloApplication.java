@@ -1,4 +1,4 @@
-package com.example.itp_projekt_snake;
+package com.example.itp_projekt_snake.View;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

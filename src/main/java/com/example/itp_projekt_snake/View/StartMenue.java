@@ -24,7 +24,6 @@ public class StartMenue extends Application {
         Stage pro = new Stage();
         view.start(pro);
 
-
     }
 
     private Parent createConetent() {
