@@ -2,23 +2,30 @@ package com.example.itp_projekt_snake.Controller;
 
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
+
+import java.util.Random;
+
+import static com.sun.marlin.MarlinConst.BLOCK_SIZE;
 
 public class SpielfeldController {
     private static final int WIDTH = 800;
     private static final int HEIGHT = WIDTH;
+//Generate random double value from 200 to 400
+
     private static final int ROWS = 20;
-    private static final int COLUMNS = ROWS;
+    private static final int COLUMN = 20;
     private static final int SQUARE_SIZE = WIDTH / ROWS;
 
-    private String black = "#000000";
+    private String pink = "ffc0cb";
     private String hell = "90cbf9";
     private String dunkel = "bbdffb";
     private int score = 0;
 
     public void drawBackground(GraphicsContext gc) {
         for (int i = 0; i < ROWS; i++) {
-            for (int j = 0; j < COLUMNS; j++) {
+            for (int j = 0; j < COLUMN; j++) {
                 String[][] feld = new String[i][j];
                 if ((i + j) % 2 == 0) {
                     gc.setFill(Color.web(dunkel));
@@ -30,17 +37,21 @@ public class SpielfeldController {
         }
     }
 
-    public void drawStartSnake(GraphicsContext gc) {
-        for (int i = 0; i < ROWS; i++) {
-            for (int j = 0; j < COLUMNS; j++) {
-                //Startpunkt Schlange
-                if (i == 4 && j == 8) {
-                    gc.setFill(Color.web(black));
-                }
-            }
-        }
-        gc.fillRect(4 * SQUARE_SIZE, 8 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE);
+
+    //lea glavas
+    public void drawFood(GraphicsContext gc) {
+
+        Random random = new Random();
+        int value1 = 1 + random.nextInt(10);
+        int value2 = 1 + random.nextInt(10);
+        System.out.println(value1);
+
+        gc.setFill(Color.web(pink));
+
+
+        gc.fillRect(value1 * SQUARE_SIZE, value2 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE);
     }
+
 
 
 

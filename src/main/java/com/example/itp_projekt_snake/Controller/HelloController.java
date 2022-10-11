@@ -11,12 +11,16 @@ public class HelloController {
     Food food =new Food();
     Spielfeld spiel =new Spielfeld();
     Snake snake = new Snake();
+    SpielfeldController spielfeldController = new SpielfeldController();
+
 
     public void start() {
         spiel.backgroundWithColour(gc);
         Snake snake = new Snake();
         snake.drawStartSnake(gc);
         snake.moveSnake(gc);
+        spielfeldController.drawFood(gc);
+
 
     }
 
