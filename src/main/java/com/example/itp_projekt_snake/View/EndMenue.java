@@ -7,11 +7,12 @@
  *
  * @author : Glavas Lea, Stockinger Annika, Muzdeka Jovana und Iris Stöcklmair
  * @date : 27.10.2022
- * @details In dieser Klasse werden die SteamOperationen angelegt
+ * @details Diese Klasse ist die View
  */
 
 package com.example.itp_projekt_snake.View;
 
+import com.example.itp_projekt_snake.Controller.EndMenueController;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -24,6 +25,7 @@ import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 public class EndMenue extends Application {
+    EndMenueController ende = new EndMenueController();
 
     /**
      * Erster Konstruktor der Klasse,
@@ -31,20 +33,7 @@ public class EndMenue extends Application {
      *
      * @param
      *
-     * @return 	none
-     */
-    public void startMenuAnzeigen() throws Exception {
-        StartMenue view = new StartMenue();
-        Stage pro = new Stage();
-        view.start(pro);
-    }
-    /**
-     * Erster Konstruktor der Klasse,
-     * initialisiert alle Parameter.
-     *
-     * @param
-     *
-     * @return 	none
+     * @return none
      */
     private Parent erzeugeAnsicht() {
         Label label = new Label();
@@ -58,18 +47,18 @@ public class EndMenue extends Application {
         int tileSize = 40;
         root.setPrefSize(30 * tileSize, 30 * tileSize);
 
-
         Button start = new Button("Try Again");
         start.setStyle("-fx-border-color: blue");       //design
         start.setStyle("-fx-color: green");            //design
         start.setTranslateX(16);
         start.setTranslateY(-120);
         start.setPrefSize(200, 100);
+
         start.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 try {
-                    startMenuAnzeigen();
+                    ende.startMenuAnzeigen();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -100,8 +89,7 @@ public class EndMenue extends Application {
      * initialisiert alle Parameter.
      *
      * @param
-     *
-     * @return 	none
+     * @return none
      */
     @Override
     public void start(Stage primaryStage) {

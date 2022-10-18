@@ -12,6 +12,7 @@
 
 package com.example.itp_projekt_snake.View;
 
+import com.example.itp_projekt_snake.Controller.StarMenueController;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -28,8 +29,8 @@ import javafx.stage.Stage;
 import java.util.Objects;
 
 public class StartMenue extends Application {
-    SpielfeldView view = new SpielfeldView();
     public static int geschw = 180;
+    StarMenueController startme = new StarMenueController();
 
     /**
      * Erster Konstruktor der Klasse,
@@ -38,11 +39,6 @@ public class StartMenue extends Application {
      * @param
      * @return none
      */
-    public void spielfeldAnzeigen() throws Exception {
-
-        Stage pro = new Stage();
-        view.start(pro);
-    }
 
     /**
      * Erster Konstruktor der Klasse,
@@ -102,7 +98,7 @@ public class StartMenue extends Application {
             @Override
             public void handle(ActionEvent event) {
                 try {
-                    spielfeldAnzeigen();
+                startme.spielfeldAnzeigen();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
