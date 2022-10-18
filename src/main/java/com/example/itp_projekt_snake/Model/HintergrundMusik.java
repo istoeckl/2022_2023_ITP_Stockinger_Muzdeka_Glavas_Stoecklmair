@@ -24,24 +24,37 @@ public class HintergrundMusik extends Thread {
     boolean OFF2 = true;
     boolean SoundON = true;
 
-    public HintergrundMusik() {}
+    public HintergrundMusik() {
+    }
 
     public void run() {
         try {
-            while(this.running) {
+            while (this.running) {
                 AudioInputStream audioStream = AudioSystem.getAudioInputStream((new File("jazz.wav")).getAbsoluteFile());
                 Clip clip = AudioSystem.getClip();
                 clip.open(audioStream);
                 clip.start();
-                int i=0;
-                while (this.running){
+                int i = 0;
+                while (this.running) {
                     Thread.sleep(1000);
                     i++;
-                    if(i>24){
+                    if (i > 24) {
                         break;
                     }
                 }
                 clip.close();
+
+                if (!this.running) {
+
+                    AudioInputStream audioStream2 = AudioSystem.getAudioInputStream((new File("beam.wav")).getAbsoluteFile());
+                    Clip clip2 = AudioSystem.getClip();
+                    clip2.open(audioStream2);
+                    clip2.start();
+                    Thread.sleep(1500);
+                    clip2.close();
+
+                }
+
             }
         } catch (UnsupportedAudioFileException var3) {
             var3.printStackTrace();
@@ -55,7 +68,8 @@ public class HintergrundMusik extends Thread {
 
     }
 
-    public static void playSound(String s, boolean SoundON) throws UnsupportedAudioFileException, IOException, LineUnavailableException, InterruptedException {}
+    public static void playSound(String s, boolean SoundON) throws UnsupportedAudioFileException, IOException, LineUnavailableException, InterruptedException {
+    }
 
     public void stopRunning() {
         this.running = false;
