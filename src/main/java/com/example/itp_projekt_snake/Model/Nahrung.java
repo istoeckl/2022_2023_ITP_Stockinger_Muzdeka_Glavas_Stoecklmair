@@ -7,7 +7,7 @@
  *
  * @author : Glavas Lea, Stockinger Annika, Muzdeka Jovana und Iris Stöcklmair
  * @date : 27.10.2022
- * @details In dieser Klasse werden die SteamOperationen angelegt
+ * @details  Diese Klasse ist das Model für die Nahrung
  */
 
 package com.example.itp_projekt_snake.Model;
@@ -33,10 +33,8 @@ public class Nahrung {
     int zufallsFarbeZahl =0;
 
     /**
-     * Erster Konstruktor der Klasse,
-     * initialisiert alle Parameter.
-     *
-     * @param
+     * generateFood()
+     * Essen Koordinaten und Farbe wird generiert
      *
      * @return 	none
      */
@@ -57,10 +55,9 @@ public class Nahrung {
     }
 
     /**
-     * Erster Konstruktor der Klasse,
-     * initialisiert alle Parameter.
-     *
-     * @param
+     * drawFood(GraphicsContext gc)
+     * Essen wird dargestellt
+     * @param gc   Hintergrund
      *
      * @return 	none
      */

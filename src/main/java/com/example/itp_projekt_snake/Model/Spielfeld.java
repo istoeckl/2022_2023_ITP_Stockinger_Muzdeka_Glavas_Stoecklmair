@@ -7,7 +7,7 @@
  *
  * @author : Glavas Lea, Stockinger Annika, Muzdeka Jovana und Iris Stöcklmair
  * @date : 27.10.2022
- * @details In dieser Klasse werden die SteamOperationen angelegt
+ * @details Diese Klasse ist das Model für das Spielfeld
  */
 
 package com.example.itp_projekt_snake.Model;
@@ -18,26 +18,22 @@ import javafx.scene.text.Font;
 
 import static com.example.itp_projekt_snake.View.SpielfeldView.*;
 
-
 public class Spielfeld {
-
     public int punkte = 0;
 
     /**
-     * Erster Konstruktor der Klasse,
-     * initialisiert alle Parameter.
-     *
-     * @param
+     * Spielfeld()
+     * Konstruktor
      *
      * @return 	none
      */
     public Spielfeld() {}
 
     /**
-     * Erster Konstruktor der Klasse,
-     * initialisiert alle Parameter.
+     * hintergrundMitFarbe(GraphicsContext gc)
+     * Erstellt den Hintergrund des Spielfeld
      *
-     * @param
+     * @param gc   Hintergrund
      *
      * @return 	none
      */
@@ -55,10 +51,10 @@ public class Spielfeld {
     }
 
     /**
-     * Erster Konstruktor der Klasse,
-     * initialisiert alle Parameter.
+     * punkteAnzeigen(GraphicsContext gc)
+     * Punkteanzeige mit speziellen Features
      *
-     * @param
+     * @param gc   Hintergrund
      *
      * @return 	none
      */

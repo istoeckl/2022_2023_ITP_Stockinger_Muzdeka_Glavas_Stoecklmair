@@ -7,7 +7,7 @@
  *
  * @author : Glavas Lea, Stockinger Annika, Muzdeka Jovana und Iris Stöcklmair
  * @date : 27.10.2022
- * @details Diese Klasse ist die View
+ * @details Diese Klasse ist der Controller des Endmenues
  */
 
 package com.example.itp_projekt_snake.Controller;
@@ -19,14 +19,18 @@ import javafx.stage.Stage;
 
 public class EndMenueController {
 
+    /**
+     * EndMenueController()
+     * Konstruktor
+     *
+     * @return none
+     */
     public EndMenueController() {
     }
 
     /**
-     * Erster Konstruktor der Klasse,
-     * initialisiert alle Parameter.
-     *
-     * @param
+     * startMenuAnzeigen()
+     * Anzeige des StartMenues
      * @return none
      */
     public void startMenuAnzeigen() throws Exception {

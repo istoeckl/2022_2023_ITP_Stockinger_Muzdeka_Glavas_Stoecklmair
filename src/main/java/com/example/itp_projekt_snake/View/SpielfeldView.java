@@ -7,7 +7,8 @@
  *
  * @author : Glavas Lea, Stockinger Annika, Muzdeka Jovana und Iris Stöcklmair
  * @date : 27.10.2022
- * @details Diese Klasse ist eine Mischung aus View und Controlle( Aufgrund von Autretenden Fehlern auf ande
+ * @details Diese Klasse ist eine Mischung aus View und Controller
+ * (Aufgrund von autretenden Fehlern konnte es nicht in Controller und View geteilt werden)
  */
 
 package com.example.itp_projekt_snake.View;
@@ -36,7 +37,6 @@ import static com.example.itp_projekt_snake.View.StartMenue.geschw;
 
 
 public class SpielfeldView extends Application {
-
     public static final int breite = 800;
     public static final int hoehe = breite;
     public static final int reihen = 20;
@@ -59,13 +59,12 @@ public class SpielfeldView extends Application {
     int aktuellePosition;
     int nurEinmal =0;
 
-
-
     /**
-     * Erster Konstruktor der Klasse,
-     * initialisiert alle Parameter.
-     *
-     * @param
+     * start(Stage primaryStage)
+     * Start-Methode
+     * handle() sorgt für rechts/links/oben/unten bewegung
+     * Schlange wird gezeichent und Spielablauf gestartet
+     * @param primaryStage   Stage worauf alles erzeugt wird
      *
      * @return 	none
      */
@@ -104,7 +103,7 @@ public class SpielfeldView extends Application {
             }
         });
 
-        schlange.anfangsSchlangeZeichnen(gc);
+        schlange.anfangsSchlangeZeichnen();
 
         Timeline timeline = new Timeline(new KeyFrame(Duration.millis(geschw), e -> spielAblauf(gc)));
         timeline.setCycleCount(Animation.INDEFINITE);
@@ -112,14 +111,16 @@ public class SpielfeldView extends Application {
     }
 
     /**
-     * Erster Konstruktor der Klasse,
-     * initialisiert alle Parameter.
+     * spielAblauf(GraphicsContext gc)
+     * Startet das spiel und prüft ob verloren ist wenn nicht
+     * wird Hintergrund, Essen und Schlange angezeigt
+     * rechts/links/oben/unten verwalted
+     * Spielende und essen von Nahrung
      *
-     * @param
+     * @param gc   Spieloberfläche
      *
      * @return 	none
      */
-    //Aufgrund von auftretenden fehlern in View
     void spielAblauf(GraphicsContext gc) {
         if (ende) {
            hintergrundMusik.stopRunning();
@@ -158,20 +159,17 @@ public class SpielfeldView extends Application {
     }
 
     /**
-     * Erster Konstruktor der Klasse,
-     * initialisiert alle Parameter.
-     *
-     * @param
+     * spielEnde()
+     * Bedingungen für Ende (wenn Schlange nicht mehr auf Feld ist
+     * oder schlange sich selbst berührt
      *
      * @return 	none
      */
-    //Aufgrund von auftretenden fehlern in View
     public void spielEnde() {
         if (schlange.schlangenKopf.x < 0 || schlange.schlangenKopf.y < 0 || schlange.schlangenKopf.x * quadratGroesse >= breite || schlange.schlangenKopf.y * quadratGroesse >= hoehe) {
             ende = true;
         }
 
-        //destroy itself
         for (int i = 1; i < schlange.schlangenKoerper.size(); i++) {
             if (schlange.schlangenKopf.x == schlange.schlangenKoerper.get(i).getX() && schlange.schlangenKopf.getY() == schlange.schlangenKoerper.get(i).getY()) {
                 ende = true;
@@ -181,14 +179,11 @@ public class SpielfeldView extends Application {
     }
 
     /**
-     * Erster Konstruktor der Klasse,
-     * initialisiert alle Parameter.
-     *
-     * @param
+     * essen()
+     * essen von Nahrung definiert
      *
      * @return 	none
      */
-    //Aufgrund von auftretenden fehlern in View
     public void essen() {
         if (schlange.schlangenKopf.getX() == nahrung.essen_x && schlange.schlangenKopf.getY() == nahrung.essen_Y) {
             schlange.schlangenKoerper.add(new Point(-1, -1));

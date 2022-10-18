@@ -7,7 +7,8 @@
  *
  * @author : Glavas Lea, Stockinger Annika, Muzdeka Jovana und Iris Stöcklmair
  * @date : 27.10.2022
- * @details Diese Klasse ist die View
+ * @details Diese Klasse ist die View vom Endmenue
+ * Hier werden die Buttons erstellt und Angezeigt
  */
 
 package com.example.itp_projekt_snake.View;
@@ -28,12 +29,10 @@ public class EndMenue extends Application {
     EndMenueController ende = new EndMenueController();
 
     /**
-     * Erster Konstruktor der Klasse,
-     * initialisiert alle Parameter.
+     * erzeugeAnsicht()
+     * Hier wird die ganze Ansicht erzeugt und angezeigt (Buttons)
      *
-     * @param
-     *
-     * @return none
+     * @return Parent
      */
     private Parent erzeugeAnsicht() {
         Label label = new Label();
@@ -85,10 +84,11 @@ public class EndMenue extends Application {
     }
 
     /**
-     * Erster Konstruktor der Klasse,
-     * initialisiert alle Parameter.
+     * start(Stage primaryStage)
+     * Start-Methode
      *
-     * @param
+     * @param primaryStage   Stage worauf alles erzeugt wird
+     *
      * @return none
      */
     @Override

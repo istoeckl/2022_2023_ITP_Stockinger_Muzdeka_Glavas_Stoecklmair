@@ -7,7 +7,7 @@
  *
  * @author : Glavas Lea, Stockinger Annika, Muzdeka Jovana und Iris Stöcklmair
  * @date : 27.10.2022
- * @details In dieser Klasse werden die SteamOperationen angelegt
+ * @details Diese Klasse ist das Model für die Schlange
  */
 
 package com.example.itp_projekt_snake.Model;
@@ -28,24 +28,21 @@ public class Schlange {
     public Point schlangenKopf;
 
     /**
-     * Erster Konstruktor der Klasse,
-     * initialisiert alle Parameter.
-     *
-     * @param
+     * Schlange()
+     * Konstruktor
      *
      * @return 	none
      */
     public Schlange() {}
 
     /**
-     * Erster Konstruktor der Klasse,
-     * initialisiert alle Parameter.
-     *
-     * @param
+     * anfangsSchlangeZeichnen(GraphicsContext gc)
+     * Zeichnet die Schlange am Anfang (Startpunkt)
+     * @param gc   Hintergrund
      *
      * @return 	none
      */
-    public void anfangsSchlangeZeichnen(GraphicsContext gc){
+    public void anfangsSchlangeZeichnen(){
         for (int i = 0; i < 3; i++) {
 
             schlangenKoerper.add(new Point(5, reihen / 2));
@@ -54,10 +51,9 @@ public class Schlange {
     }
 
     /**
-     * Erster Konstruktor der Klasse,
-     * initialisiert alle Parameter.
-     *
-     * @param
+     * schlangeZeichnen(GraphicsContext gc)
+     * Zeichnet die ganze Schlange (Farbe, Größe)
+     * @param gc   Hintergrund
      *
      * @return 	none
      */
@@ -73,10 +69,8 @@ public class Schlange {
     }
 
     /**
-     * Erster Konstruktor der Klasse,
-     * initialisiert alle Parameter.
-     *
-     * @param
+     * beibehaltenSchlangenGroesse()
+     * Die Schlange belibt bei ihrer Größe wenn sie nichts isst.
      *
      * @return 	none
      */
@@ -89,10 +83,9 @@ public class Schlange {
     }
 
     /**
-     * Erster Konstruktor der Klasse,
-     * initialisiert alle Parameter.
-     *
-     * @param
+     * nachRechts()
+     * SchlangenKopfkoordinate x wird erhöht
+     * = Bewegung nach rechts
      *
      * @return 	none
      */
@@ -101,10 +94,9 @@ public class Schlange {
     }
 
     /**
-     * Erster Konstruktor der Klasse,
-     * initialisiert alle Parameter.
-     *
-     * @param
+     * nachLinks()
+     * SchlangenKopfkoordinate x wird erniedrigt
+     * = Bewegung nach links
      *
      * @return 	none
      */
@@ -113,10 +105,9 @@ public class Schlange {
     }
 
     /**
-     * Erster Konstruktor der Klasse,
-     * initialisiert alle Parameter.
-     *
-     * @param
+     * nachOben()
+     * SchlangenKopfkoordinate y wird erniedrigt
+     * = Bewegung nach oben
      *
      * @return 	none
      */
@@ -125,10 +116,9 @@ public class Schlange {
     }
 
     /**
-     * Erster Konstruktor der Klasse,
-     * initialisiert alle Parameter.
-     *
-     * @param
+     * nachUnten()
+     * SchlangenKopfkoordinate y wird erhöht
+     * = Bewegung nach unten
      *
      * @return 	none
      */

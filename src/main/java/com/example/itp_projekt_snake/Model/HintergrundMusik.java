@@ -7,7 +7,7 @@
  *
  * @author : Glavas Lea, Stockinger Annika, Muzdeka Jovana und Iris Stöcklmair
  * @date : 27.10.2022
- * @details In dieser Klasse werden die SteamOperationen angelegt
+ * @details Diese Klasse ist das Model und Controller für die Hintergrundmusik
  */
 
 
@@ -23,10 +23,20 @@ public class HintergrundMusik extends Thread {
     boolean OFF = false;
     boolean OFF2 = true;
     boolean SoundON = true;
-
+    /**
+     * HintergrundMusik()
+     * Konstruktor
+     *
+     * @return 	none
+     */
     public HintergrundMusik() {
     }
 
+    /**
+     * run()
+     * Musik wird gestarted / end Musik ebenfalls
+     * @return 	none
+     */
     public void run() {
         try {
             while (this.running) {
@@ -45,14 +55,12 @@ public class HintergrundMusik extends Thread {
                 clip.close();
 
                 if (!this.running) {
-
                     AudioInputStream audioStream2 = AudioSystem.getAudioInputStream((new File("beam.wav")).getAbsoluteFile());
                     Clip clip2 = AudioSystem.getClip();
                     clip2.open(audioStream2);
                     clip2.start();
                     Thread.sleep(1500);
                     clip2.close();
-
                 }
 
             }
@@ -68,9 +76,12 @@ public class HintergrundMusik extends Thread {
 
     }
 
-    public static void playSound(String s, boolean SoundON) throws UnsupportedAudioFileException, IOException, LineUnavailableException, InterruptedException {
-    }
-
+    /**
+     * stopRunning()
+     * Stoppt Musik
+     *
+     * @return 	none
+     */
     public void stopRunning() {
         this.running = false;
     }
