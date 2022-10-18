@@ -7,7 +7,7 @@
  *
  * @author : Glavas Lea, Stockinger Annika, Muzdeka Jovana und Iris Stöcklmair
  * @date : 27.10.2022
- * @details In dieser Klasse werden die SteamOperationen angelegt
+ * @details Diese Klasse ist eine Mischung aus View und Controlle( Aufgrund von Autretenden Fehlern auf ande
  */
 
 package com.example.itp_projekt_snake.View;
@@ -31,6 +31,8 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.awt.*;
+
+import static com.example.itp_projekt_snake.View.StartMenue.geschw;
 
 
 public class SpielfeldView extends Application {
@@ -58,6 +60,7 @@ public class SpielfeldView extends Application {
     int nurEinmal =0;
 
 
+
     /**
      * Erster Konstruktor der Klasse,
      * initialisiert alle Parameter.
@@ -76,7 +79,7 @@ public class SpielfeldView extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
         gc = canvas.getGraphicsContext2D();
-
+        hintergrundMusik.start();
         scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent event) {
@@ -102,9 +105,8 @@ public class SpielfeldView extends Application {
         });
 
         schlange.anfangsSchlangeZeichnen(gc);
-        //generateFood();
 
-        Timeline timeline = new Timeline(new KeyFrame(Duration.millis(130), e -> spielAblauf(gc)));
+        Timeline timeline = new Timeline(new KeyFrame(Duration.millis(geschw), e -> spielAblauf(gc)));
         timeline.setCycleCount(Animation.INDEFINITE);
         timeline.play();
     }
@@ -120,7 +122,7 @@ public class SpielfeldView extends Application {
     //Aufgrund von auftretenden fehlern in View
     void spielAblauf(GraphicsContext gc) {
         if (ende) {
-           // hintergrundMusik.stopRunning();
+           hintergrundMusik.stopRunning();
             EndMenue end = new EndMenue();
             if(nurEinmal <1){
                 nurEinmal++;
@@ -130,9 +132,6 @@ public class SpielfeldView extends Application {
                 return;
             }
         }
-
-
-        //hintergrundMusik.start();
 
         spiel.hintergrundMitFarbe(gc);
         nahrung.drawFood(gc);

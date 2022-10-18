@@ -33,8 +33,8 @@ public class EndMenue extends Application {
      *
      * @return 	none
      */
-    public void spielfeldAnzeigen() throws Exception {
-        SpielfeldView view = new SpielfeldView();
+    public void startMenuAnzeigen() throws Exception {
+        StartMenue view = new StartMenue();
         Stage pro = new Stage();
         view.start(pro);
     }
@@ -69,7 +69,7 @@ public class EndMenue extends Application {
             @Override
             public void handle(ActionEvent event) {
                 try {
-                    spielfeldAnzeigen();
+                    startMenuAnzeigen();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

@@ -25,28 +25,31 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
+import java.util.Objects;
+
 public class StartMenue extends Application {
+    SpielfeldView view = new SpielfeldView();
+    public static int geschw = 180;
+
     /**
      * Erster Konstruktor der Klasse,
      * initialisiert alle Parameter.
      *
      * @param
-     *
-     * @return 	none
+     * @return none
      */
     public void spielfeldAnzeigen() throws Exception {
-        SpielfeldView view = new SpielfeldView();
+
         Stage pro = new Stage();
         view.start(pro);
-
     }
+
     /**
      * Erster Konstruktor der Klasse,
      * initialisiert alle Parameter.
      *
      * @param
-     *
-     * @return 	none
+     * @return none
      */
     private Parent erzeugeAnsicht() {
         Label label = new Label();
@@ -61,13 +64,33 @@ public class StartMenue extends Application {
         root.setPrefSize(30 * tileSize, 30 * tileSize);
 
 //Auswahl Levels
-        MenuButton menuButton = new MenuButton("Levels");
-        menuButton.getItems().addAll(new MenuItem("1.0x"), new MenuItem("1.5x"), new MenuItem("2.0x"));
+        MenuItem menuItem1 = new MenuItem("Einfach");
+        MenuItem menuItem2 = new MenuItem("Normel");
+        MenuItem menuItem3 = new MenuItem("Schwer");
+        MenuButton menuButton = new MenuButton("Optionen:", null, menuItem1, menuItem2, menuItem3);
+        menuItem2.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                geschw = 130;
+            }
+        });
+
+        menuItem3.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                geschw = 65;
+            }
+        });
+
         menuButton.setTranslateX(10);
         menuButton.setTranslateY(100);
         root.getChildren().add(label);
         root.getChildren().add(menuButton);
-
+        //if () {
+        //     geschw = 100;
+        //  } else if (Objects.equals(menuButton.getItems().toString(), "schwer")) {
+        //     geschw = 70;
+        // }
 
         Button start = new Button("Start");
         start.setStyle("-fx-border-color: blue");       //design
@@ -104,13 +127,13 @@ public class StartMenue extends Application {
 
         return root;
     }
+
     /**
      * Erster Konstruktor der Klasse,
      * initialisiert alle Parameter.
      *
      * @param
-     *
-     * @return 	none
+     * @return none
      */
     @Override
     public void start(Stage primaryStage) {
