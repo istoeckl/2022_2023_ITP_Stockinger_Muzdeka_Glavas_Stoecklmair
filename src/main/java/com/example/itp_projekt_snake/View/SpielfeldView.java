@@ -86,8 +86,7 @@ public class SpielfeldView extends Application {
         gc = canvas.getGraphicsContext2D();
         schlange.anfangsSchlangeZeichnen();
         hintergrundMusik.start();
-        //generateFood();
-        Timeline timeline = new Timeline(new KeyFrame(Duration.millis(130), e -> spielAblauf(gc)));
+        Timeline timeline = new Timeline(new KeyFrame(Duration.millis(geschw), e -> spielAblauf(gc)));
         timeline.setCycleCount(Animation.INDEFINITE);
         timeline.play();
         scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
