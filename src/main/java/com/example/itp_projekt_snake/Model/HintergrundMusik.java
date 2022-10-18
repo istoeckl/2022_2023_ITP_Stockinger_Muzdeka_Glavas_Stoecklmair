@@ -19,42 +19,34 @@ import java.io.IOException;
 
 public class HintergrundMusik extends Thread {
     boolean running = true;
-    boolean ON = true;
     boolean OFF = false;
-    boolean OFF2 = true;
-    boolean SoundON = true;
-    /**
-     * HintergrundMusik()
-     * Konstruktor
-     *
-     * @return 	none
-     */
-    public HintergrundMusik() {
-    }
 
-    /**
-     * run()
-     * Musik wird gestarted / end Musik ebenfalls
-     * @return 	none
-     */
     public void run() {
         try {
             while (this.running) {
+                while (this.OFF) {
+                    Thread.sleep(500);
+                }
                 AudioInputStream audioStream = AudioSystem.getAudioInputStream((new File("jazz.wav")).getAbsoluteFile());
                 Clip clip = AudioSystem.getClip();
                 clip.open(audioStream);
                 clip.start();
                 int i = 0;
-                while (this.running) {
+                while (!this.OFF) {
+
                     Thread.sleep(1000);
                     i++;
                     if (i > 24) {
                         break;
                     }
+                    if (!running) {
+                        break;
+                    }
+
                 }
                 clip.close();
-
                 if (!this.running) {
+                    Thread.sleep(800);
                     AudioInputStream audioStream2 = AudioSystem.getAudioInputStream((new File("beam.wav")).getAbsoluteFile());
                     Clip clip2 = AudioSystem.getClip();
                     clip2.open(audioStream2);
@@ -62,8 +54,8 @@ public class HintergrundMusik extends Thread {
                     Thread.sleep(1500);
                     clip2.close();
                 }
-
             }
+
         } catch (UnsupportedAudioFileException var3) {
             var3.printStackTrace();
         } catch (IOException var4) {
@@ -76,15 +68,22 @@ public class HintergrundMusik extends Thread {
 
     }
 
-    /**
-     * stopRunning()
-     * Stoppt Musik
-     *
-     * @return 	none
-     */
+    public HintergrundMusik() {}
+
+    public static void playSound(String s, boolean SoundON) throws UnsupportedAudioFileException, IOException, LineUnavailableException, InterruptedException {}
+
     public void stopRunning() {
         this.running = false;
     }
 
+    public void OFF() {
+        this.OFF = true;
+    }
+
+    public void ON() {
+        this.OFF = false;
+    }
 
 }
+
+

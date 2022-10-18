@@ -28,12 +28,14 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.awt.*;
 
 import static com.example.itp_projekt_snake.View.StartMenue.geschw;
+import static javafx.scene.paint.Color.BLACK;
 
 
 public class SpielfeldView extends Application {
@@ -55,6 +57,7 @@ public class SpielfeldView extends Application {
     Nahrung nahrung = new Nahrung();
     HintergrundMusik hintergrundMusik = new HintergrundMusik();
 
+    public boolean pauseActive = false;
     public boolean ende;
     int aktuellePosition;
     int nurEinmal =0;
@@ -78,7 +81,12 @@ public class SpielfeldView extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
         gc = canvas.getGraphicsContext2D();
+        schlange.anfangsSchlangeZeichnen();
         hintergrundMusik.start();
+        //generateFood();
+        Timeline timeline = new Timeline(new KeyFrame(Duration.millis(130), e -> spielAblauf(gc)));
+        timeline.setCycleCount(Animation.INDEFINITE);
+        timeline.play();
         scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent event) {
@@ -99,15 +107,26 @@ public class SpielfeldView extends Application {
                     if (aktuellePosition != oben) {
                         aktuellePosition = unten;
                     }
+                } else if (code == KeyCode.SPACE){
+                    if(!pauseActive){
+                        pauseActive = true;
+                        hintergrundMusik.OFF();
+                        timeline.stop();
+
+                        gc.setFill(BLACK);
+                        gc.setFont(Font.font("Digital-7"));
+                        gc.fillText("Pause",800 / 3.5, 800 / 2);
+
+                    } else{
+                        timeline.play();
+                        hintergrundMusik.ON();
+                        pauseActive = false;
+                    }
+
                 }
+
             }
         });
-
-        schlange.anfangsSchlangeZeichnen();
-
-        Timeline timeline = new Timeline(new KeyFrame(Duration.millis(geschw), e -> spielAblauf(gc)));
-        timeline.setCycleCount(Animation.INDEFINITE);
-        timeline.play();
     }
 
     /**
