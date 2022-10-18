@@ -74,11 +74,6 @@ public class StartMenue extends Application {
         menuButton.setTranslateY(100);
         root.getChildren().add(label);
         root.getChildren().add(menuButton);
-        //if () {
-        //     geschw = 100;
-        //  } else if (Objects.equals(menuButton.getItems().toString(), "schwer")) {
-        //     geschw = 70;
-        // }
 
         Button start = new Button("Start");
         start.setStyle("-fx-border-color: blue");       //design

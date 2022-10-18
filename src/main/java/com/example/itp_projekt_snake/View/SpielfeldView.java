@@ -13,6 +13,7 @@
 
 package com.example.itp_projekt_snake.View;
 
+import com.example.itp_projekt_snake.Controller.EndMenueController;
 import com.example.itp_projekt_snake.Model.HintergrundMusik;
 import com.example.itp_projekt_snake.Model.Nahrung;
 import com.example.itp_projekt_snake.Model.Schlange;
@@ -56,6 +57,8 @@ public class SpielfeldView extends Application {
     Schlange schlange = new Schlange();
     Nahrung nahrung = new Nahrung();
     HintergrundMusik hintergrundMusik = new HintergrundMusik();
+
+    EndMenueController menue = new EndMenueController();
 
     public boolean pauseActive = false;
     public boolean ende;
@@ -114,7 +117,7 @@ public class SpielfeldView extends Application {
                         timeline.stop();
 
                         gc.setFill(BLACK);
-                        gc.setFont(Font.font("Digital-7"));
+                        gc.setFont(new Font("Digital-7",100));
                         gc.fillText("Pause",800 / 3.5, 800 / 2);
 
                     } else{
@@ -123,6 +126,13 @@ public class SpielfeldView extends Application {
                         pauseActive = false;
                     }
 
+                }else if (code == KeyCode.ESCAPE){
+
+                    try {
+                       System.exit(0);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                 }
 
             }
