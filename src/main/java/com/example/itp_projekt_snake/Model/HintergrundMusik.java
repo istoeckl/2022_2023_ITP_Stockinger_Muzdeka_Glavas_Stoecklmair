@@ -21,6 +21,12 @@ public class HintergrundMusik extends Thread {
     boolean running = true;
     boolean OFF = false;
 
+    /**
+     * run()
+     * Musik started
+     *
+     * @return none
+     */
     public void run() {
         try {
             while (this.running) {
@@ -68,18 +74,40 @@ public class HintergrundMusik extends Thread {
 
     }
 
+    /**
+     * HintergrundMusik()
+     * Konstruktor
+     *
+     * @return none
+     */
     public HintergrundMusik() {}
 
-    public static void playSound(String s, boolean SoundON) throws UnsupportedAudioFileException, IOException, LineUnavailableException, InterruptedException {}
-
+    /**
+     * stopRunning()
+     * Stop-Funktion
+     *
+     * @return none
+     */
     public void stopRunning() {
         this.running = false;
     }
 
+    /**
+     * OFF()
+     * Sound beenden
+     *
+     * @return none
+     */
     public void OFF() {
         this.OFF = true;
     }
 
+    /**
+     * ON()
+     * Sound erneut starten
+     *
+     * @return none
+     */
     public void ON() {
         this.OFF = false;
     }
