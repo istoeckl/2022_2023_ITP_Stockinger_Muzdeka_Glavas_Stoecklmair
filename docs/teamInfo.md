@@ -1,4 +1,4 @@
-<h1>TeamInfos </h1
+<h1>TeamInfos </h1>
 
 <h3>Pruduct Owner</h3>
 Monika Rohrweck
