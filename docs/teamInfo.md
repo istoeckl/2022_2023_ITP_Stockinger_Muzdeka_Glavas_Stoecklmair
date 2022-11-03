@@ -14,5 +14,6 @@ Muzdeka Jovana
 Glavas Lea
 
 <h3>Developer</h3>
+
 Stockinger Annika
 
