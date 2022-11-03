@@ -1,4 +1,7 @@
 Hell World
 
 
-[Infos über mich](about_me.md)
+[Infos übers Team](teamInfo.md)
+[Probleme](Probleme.md)
+[JoviTest](jovi_test.md)
+[Annikatest](annika_test.md)
