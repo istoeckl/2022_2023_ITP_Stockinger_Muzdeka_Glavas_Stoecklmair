@@ -1,4 +1,4 @@
-<h1 Unsere Probleme während des Snake-Projekts: </h1>
+<h1> Unsere Probleme während des Snake-Projekts: </h1>
 
 Bewegung der Schlange -> Timeline, AnimationTimer 
 Umsetzung der MVC Struktur
