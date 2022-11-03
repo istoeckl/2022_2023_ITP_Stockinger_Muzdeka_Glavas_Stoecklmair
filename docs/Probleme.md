@@ -1,9 +1,9 @@
 <h1> Unsere Probleme während des Snake-Projekts: </h1>
 
-Bewegung der Schlange -> Timeline, AnimationTimer </br> 
-Umsetzung der MVC Struktur </br> 
-Sound lief vor Abbruch durch</br> 
-Zeitmanagement</br> 
-Design nicht so kreativ
+<p> Bewegung der Schlange -> Timeline, AnimationTimer </p> 
+<p> Umsetzung der MVC Struktur </p> 
+<p> Sound lief vor Abbruch durch</p> 
+<p> Zeitmanagement</p> 
+<p> Design nicht so kreativ </p> 
 
 
