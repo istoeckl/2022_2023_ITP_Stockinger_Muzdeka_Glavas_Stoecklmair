@@ -17,7 +17,6 @@ Glavas Lea
 <p>Birthday: 29.08.2005</p>
 
 <h3>Developer3</h3>
-
 Stockinger Annika
 <p>Birthday: 05.03.2005</p>
 
