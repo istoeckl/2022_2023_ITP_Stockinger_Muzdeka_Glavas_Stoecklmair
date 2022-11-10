@@ -1,5 +1,5 @@
 <h1> Unsere Probleme während des Snake-Projekts:   
-<img src="https://cdn-icons-png.flaticon.com/512/889/889220.png" height="100" width="100" alt="Bild kann nicht geladen werden." border="3" align="center"></h1>
+<img src="https://cdn-icons-png.flaticon.com/512/150/150409.png" height="100" width="100" alt="Bild kann nicht geladen werden." border="3" align="center"></h1>
 
 
 
