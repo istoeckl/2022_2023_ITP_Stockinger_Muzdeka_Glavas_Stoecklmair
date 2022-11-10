@@ -1,5 +1,5 @@
 <h1> Unsere Probleme während des Snake-Projekts:   
-<img src="https://images.emojiterra.com/openmoji/v13.1/512px/1f622.png" height="100" width="80" alt="Bild kann nicht geladen werden." border="3" align="center"></h1>
+<img src="https://images.emojiterra.com/openmoji/v13.1/512px/1f622.png" height="100" width="100" alt="Bild kann nicht geladen werden." border="3" align="center"></h1>
 
 
 
