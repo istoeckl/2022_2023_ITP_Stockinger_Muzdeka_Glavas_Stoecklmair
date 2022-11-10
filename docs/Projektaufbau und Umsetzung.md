@@ -1,4 +1,4 @@
-> # Projektaufbau und Umsetzung
+# Projektaufbau und Umsetzung
 > * MVC Model
 >  : Das Model View Controller Entwurfsmuster, bietet einen flexiblen und übersichtlichen Programmentwurf.
 >  * SCRUM + Trello
