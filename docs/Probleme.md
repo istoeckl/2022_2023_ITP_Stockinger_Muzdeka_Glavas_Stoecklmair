@@ -6,7 +6,7 @@
 
 
 
-<p> * Probleme gab es mit der Bewegung der Schlange (Timeline, AnimationTimer).   <img src="https://rembound.com/files/creating-a-snake-game-tutorial-with-html5/snake.png" height="100" width="100" alt="Bild kann nicht geladen werden." border="3" align="center">
+* <p> Probleme gab es mit der Bewegung der Schlange (Timeline, AnimationTimer).   <img src="https://rembound.com/files/creating-a-snake-game-tutorial-with-html5/snake.png" height="100" width="100" alt="Bild kann nicht geladen werden." border="3" align="center">
 </p> 
 <p> * Ein weiteres Problem war die Umsetzung der MVC Struktur, weil </P>
 <p> * Der Sound ist nach Abbruch immer noch weitergelaufen.</p> 
