@@ -7,7 +7,7 @@
 * <p>Punkte zählung
 * <p>Hintergrundmusik
 * <p>Start/Endmenü
-* <p>Pausier möglichkeit       <img align="Center" src="https://fiverr-res.cloudinary.com/images/t_smartwm/t_main1,q_auto,f_auto,q_auto,f_auto/attachments/delivery/asset/f72ba2eadf99bf4d9a2ea6e5fc4ac660-1607574925/Project%2094_22/design-cute-chibi-animals.png" height="200px"/></p>             
+* <p>Pausier möglichkeit       <img style="float:right; src="https://fiverr-res.cloudinary.com/images/t_smartwm/t_main1,q_auto,f_auto,q_auto,f_auto/attachments/delivery/asset/f72ba2eadf99bf4d9a2ea6e5fc4ac660-1607574925/Project%2094_22/design-cute-chibi-animals.png" height="200px"/></p>             
   
  
   
