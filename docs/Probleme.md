@@ -8,8 +8,11 @@
 
 * <p>Probleme gab es mit der Bewegung der Schlange (Timeline, AnimationTimer).   
 </p> 
-* <p>Ein weiteres Problem war die Umsetzung der MVC Struktur.</p>
-* <p>Der Sound ist nach Abbruch immer noch weitergelaufen.</p> 
-* <p>Auch ein Porblem war unser Zeitmanagement, da wir manches falsch eingeteilt haben.    
+* <p>Ein weiteres Problem war die Umsetzung der MVC Struktur.
+</p>
+* <p>Der Sound ist nach Abbruch immer noch weitergelaufen.
+</p> 
+* <p>Auch ein Porblem war unser Zeitmanagement, da wir manches falsch eingeteilt haben.   
+</p> 
 * <p>Rückblickend hätte das Design kreativer und ausgefallener sein können </p> 
 
