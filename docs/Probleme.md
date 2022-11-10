@@ -10,6 +10,6 @@
 <p> Umsetzung der MVC Struktur  <img src="https://miro.medium.com/max/884/1*yrAnC64Mq_7DuhRQWkbUmQ.png" height="150" width="250" alt="Bild kann nicht geladen werden." border="3" align="center">
  </p> 
 <p> Sound läuft nach Abbruch weiter</p> 
-<p> Zeitmanagement        <img src="https://image.spreadshirtmedia.net/image-server/v1/mp/products/T1459A839PA4459PT28D151362539W10000H10000/views/1,width=378,height=378,appearanceId=839,backgroundColor=F2F2F2/sanduhr-symbol-zeichen-zeit-laeuft-geschenk.jpg" height="150" width="250" alt="Bild kann nicht geladen werden." border="3" align="center"></p> 
+<p> Zeitmanagement        <img src="https://banner2.cleanpng.com/20180615/sfi/kisspng-symbol-logo-computer-icons-time-cargo-hook-5b235691dd7733.5545516115290425779071.jpg" height="150" width="250" alt="Bild kann nicht geladen werden." border="3" align="center"></p> 
 <p> Design nicht so kreativ </p> 
 
