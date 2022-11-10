@@ -1,5 +1,3 @@
-@import "{{ site.theme }}";
-
 <h2>Herzlich Willkommen zu unserer Snake Webseite! </h2>
 <p>Hier finden sie einige Infos über unser Projekt: </p>
 
