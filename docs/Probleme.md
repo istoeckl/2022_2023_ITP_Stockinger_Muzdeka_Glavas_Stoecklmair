@@ -14,5 +14,6 @@
 </p> 
 * <p>Auch ein Porblem war unser Zeitmanagement, da wir manches falsch eingeteilt haben.   
 </p> 
-* <p>Rückblickend hätte das Design kreativer und ausgefallener sein können </p> 
+* <p>Rückblickend hätte das Design kreativer und ausgefallener sein können 
+</p> 
 
