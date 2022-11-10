@@ -5,9 +5,9 @@
 
 
 
-*Probleme gab es mit der Bewegung der Schlange (Timeline, AnimationTimer).   
-*Ein weiteres Problem war die Umsetzung der MVC Struktur.
-*Der Sound ist nach Abbruch immer noch weitergelaufen.
-*Auch ein Porblem war unser Zeitmanagement, da wir manches falsch eingeteilt haben.   
-*Rückblickend hätte das Design kreativer und ausgefallener sein können 
+* Probleme gab es mit der Bewegung der Schlange (Timeline, AnimationTimer).   
+* Ein weiteres Problem war die Umsetzung der MVC Struktur.
+* Der Sound ist nach Abbruch immer noch weitergelaufen.
+* Auch ein Porblem war unser Zeitmanagement, da wir manches falsch eingeteilt haben.   
+* Rückblickend hätte das Design kreativer und ausgefallener sein können 
 
