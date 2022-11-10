@@ -8,3 +8,9 @@
 [JoviTest](jovi_test.md)
 
 [Annikatest](annika_test.md)
+
+
+{% for element in site.data.students %}
+- {{element.firstname}}, {{element.lastname}}, {{element.class}}
+{% endfor %}
+
